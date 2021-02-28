@@ -151,15 +151,7 @@ void check_ans(char answer, char right_ans,int ques_no){
         cout<<"\n";
     
     }
-    else if(answer='l' && lifeline_count!=0){
-            lifeline(right_ans,ques_no);
-        
-    }
-    else if (answer='l' && lifeline_count==0){
-        cout<<"you have exhausted all your lifelines please guess any option to continue \n";
-    }
-        
-    else{
+    else if(answer!=right_ans && answer!='l'){
         cout<<"sorry your answer is wrong\n"<<ques_no;
         int amount_deducted=(cash*ques_no)/10;
         cash=cash-cash*ques_no/10;
@@ -169,6 +161,15 @@ void check_ans(char answer, char right_ans,int ques_no){
         
         
     }
+    else if(answer='l' && lifeline_count!=0){
+            lifeline(right_ans,ques_no);
+        
+    }
+    else if (answer='l' && lifeline_count==0){
+        cout<<"you have exhausted all your lifelines please guess any option to continue \n";
+    }
+        
+    
         
      
     
@@ -222,4 +223,4 @@ void lifeline(char right_ans, int ques_no){
             
         
     }
-}  
+}
