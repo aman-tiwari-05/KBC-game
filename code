@@ -4,7 +4,7 @@ using namespace std;
 void ask_ques();
 void check_ans(char answer, char right_ans,int);
 void lifeline(char right_ans,int ques_no);
-int lifeline_count=3;
+int lifeline_count=2;
 int cash=100;
 bool double_dip=true;
 bool skip=true;
@@ -152,7 +152,7 @@ void check_ans(char answer, char right_ans,int ques_no){
     
     }
     else if(answer!=right_ans && answer!='l'){
-        cout<<"sorry your answer is wrong\n"<<ques_no;
+        cout<<"sorry your answer is wrong\n";
         int amount_deducted=(cash*ques_no)/10;
         cash=cash-cash*ques_no/10;
         cout<<"amount deducted   "<<amount_deducted<<endl;
@@ -167,6 +167,25 @@ void check_ans(char answer, char right_ans,int ques_no){
     }
     else if (answer='l' && lifeline_count==0){
         cout<<"you have exhausted all your lifelines please guess any option to continue \n";
+            
+            char choice;
+            cout<<"Enter your choice: ";
+            cin>>choice;
+        if(answer==right_ans){
+        cash=ques_no*cash;
+        cout<<"congrats your answer is right\n";
+        cout<<"you have won: "<<cash<<endl;
+        cout<<"\n";
+        cout<<"\n";
+    
+    }
+    else if(answer!=right_ans && answer!='l'){
+        cout<<"sorry your answer is wrong\n";
+        int amount_deducted=(cash*ques_no)/10;
+        cash=cash-cash*ques_no/10;
+        cout<<"amount deducted   "<<amount_deducted<<endl;
+        cout<<"\n";
+        cout<<"\n";    
     }
         
     
@@ -174,7 +193,7 @@ void check_ans(char answer, char right_ans,int ques_no){
      
     
 
-}
+}}
 void lifeline(char right_ans, int ques_no){
     cout<<"available lifelines: ";
     if(double_dip){    //to check availablity of double dip 
@@ -192,35 +211,46 @@ void lifeline(char right_ans, int ques_no){
    if(life_line=="skip"){
        cout<<"You have successfully  skipped the question  without any deduction\n\n ";
        skip=false;
+       lifeline_count--;
    } //for skip 
        
-    else if(life_line=="double dip"){                                   //for double_dip
-        cout<<"you have selected double dip life line so you will be given 2 chances to enter the correct choice\n";
+    else{                                   //for double_dip
+        cout<<"you have selected double dip life line so you will be given 2 chances to enter the correct choice\n\n";
         double_dip=false;
         lifeline_count--;
-        bool num=false;
         
-        for(int i=1;i<3;i++){
-            char opt;
-            cout<<"enter your"<<i<<"time: ";
-            cin>>opt;
-            if (opt==right_ans){
-                num=true;
-                cout<<endl;
-                break;}}
-            if (num){
-                cout<<"congrats your answer is right\n";
-                cash=ques_no*cash;
-                cout<<"you have won: "<<cash<<endl;
-            }
-            else{
-                cout<<"you both answers are wrong\n";
-                int amount_deducted=(cash*ques_no)/10;
-            cash=cash-cash*ques_no/10;
-            cout<<"amount deducted: "<<amount_deducted<<endl;
-                
-            }
+        int num=0;
+        int k;
+        for(int k=1;k<3;k++){
+            char ch;
+            cout<<"chance "<<k<<" Enter your move: ";
+            cin>>ch;
             
+            
+            
+            
+            if (ch==right_ans){
+                num=1;
+                break;
+            }
+        }
+        if (num==1){
+            cash=ques_no*cash;
+            cout<<"congrats your answer is right\n";
+            cout<<"you have won: "<<cash<<endl;
+            cout<<"\n";
+            cout<<"\n";
+        }
+        else{
+            cout<<"sorry your answer is wrong\n";
+            int amount_deducted=(cash*ques_no)/10;
+            cash=cash-cash*ques_no/10;
+            cout<<"amount deducted   "<<amount_deducted<<endl;
+            cout<<"\n";
+            cout<<"\n";
+        }
+        
+        
         
     }
 }
