@@ -1,8 +1,6 @@
-
-
 #include <iostream>
-
 using namespace std;
+
 void ask_ques();
 void check_ans(char answer, char right_ans,int);
 void lifeline(char right_ans,int ques_no);
@@ -26,84 +24,84 @@ Question q[10];
 int main()
 {   char topic ;
     cout<<"Choose any topic given below of your intrest.\n";
-    cout<<"Enter 'a' for  \n ";
-    cout<<"Enter 'b' for  \n ";
-    cout<<"Enter 'c' for  \n ";
-    cout<<"Enter 'd' for  \n ";
-    cout<<"Enter 'e' for  \n ";
-    cout<<"Enter 'f' for  \n ";
+    cout<<"Enter 'a' for Sports.\n ";
+    cout<<"Enter 'b' for Entertainment.\n ";
+    cout<<"Enter 'c' for Mythology.\n ";
+    cout<<"Enter 'd' for Indian History.\n ";
+    cout<<"Enter 'e' for Science & Tech.\n ";
+    cout<<"Enter 'f' for Current Affairs.\n ";
     cin>>topic;
     switch(topic){
-        case 'a': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'a': q[0]={"Which team has never won the IPL tournament?","a:Rajasthan Royals","b:Royal Challengers Bangalore","c:Sunrisers Hyderabad","d:Kolkata Knight Riders",'b',true};
+                q[1]={"In Cricket, which team holds the record of highest run chase in Odi format?","a:Australia","b:South Africa","c:India","d:England",'b',true};
+                q[2]={"Which team won UEFA champions league 2019?","a:Real Madrid","b:Liverpool","c:Bayern Munich","d:Barcelona",'b',true};
+                q[3]={"In which country is FIFA world cup 2022 scheduled to be played?","a:France","b:Spain","c:Russia","d:Qatar",'d',true};
+                q[4]={"In a badminton game, the winner is the one to reach ___ points?","a:11","b:16","c:21","d:23",'c',true};
+                q[5]={"Who won the most Women’s Single Wimbledon tennis tournaments?","a:Martina Navratilova","b:Steffi Graf","c:Serena Williams","d:Simona Halep",'a',true};
+                q[6]={"How many times has India won the hockey world cup (Men’s)?","a:2","b:0","c:1","d:3",'c',true};
+                q[7]={"How many times has Usain Bolt won the world championship?","a:11","b:10","c:12","d:9",'a',true};
+                q[8]={"Who is the most valuable player in NBA 2020?","a:LeBron James","b:Giannis Antetokounmpo","c:Nikola Jokic","d:Joel Embiid",'b',true};
+                q[9]={"Who won ICC Women’s T20I Player of the decade?","a:Alyssa Healy","b:Deandra Dottin","c:Sophie Devine","d:Ellyse Perry",'d',true};
                 ask_ques();
                 break;
-        case 'b': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'b': q[0]={"Which is the World’s highest grossing film?","a:Avengers : Infinity war","b:Titanic","c:Avengers : Endgame","d:Avatar",'c',true};
+                q[1]={"Which is the most viewed video on youtube?","a:Shape of you","b:Baby shark dance","c:Despacito","d:See you again",'b',true};
+                q[2]={"Joining Lil Nas X, which band became the first K-pop group to perform at the Grammys?","a:Monsta X","b:BLACKPINK","c:GOT7","d:BTS",'d',true};
+                q[3]={"Who had created a Guinness Book of World Records for writing 3,524 songs in 650 films over 33 years in Bollywood?","a:Gulzar","b:Javed Akhtar","c:Sameer","d:Nadeem",'c',true};
+                q[4]={"Cannes Film Festival is held in ________ every year.","a:France","b:Italy","c:Greece","d:Spain",'a',true};
+                q[5]={"Who won the Oscar for the Best Actress in 2020?","a:Scarlett Johansson","b:Cynthia Erivo","c:Saoirse Ronan","d:Renee Zellweger",'d',true};
+                q[6]={"In the ‘DARK’ series what is the important question?","a:Not how but where","b:Not where but when","c:Not when but whom","d:Not when but how",'b',true};
+                q[7]={"What was the first animated Disney film?","a:The lion king","b:Frozen","c:Cars","d:Snow White and the Seven Dwarfs",'a',true};
+                q[8]={"Who sang the song tujhe kitna chahne lage?","a:Jubin Nautiyal","b:Arijit Singh","c:Ankit tiwari","d:Javed Ali",'b',true};
+                q[9]={"Who is the aunt of Jon Snow in Game of Thrones.","a:Catelyn Stark","b:Daenerys Targaryen","c:Cersie Lannister","d:Margery",'b',true};
                 ask_ques();
                 break;
-        case 'c': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'c': q[0]={"What is the name of the only sister of 100 kaurav brothers?","a:Ulupi","b:Uttara","c:Hidimba","d:Dussala",'d',true};
+                q[1]={"Who narrates the action of kurukshetra to Dhritarashtra live during the battle?","a:Vidur","b:Sanjay","c:Kunti","d:Shakuni",'b',true};
+                q[2]={"Who gifted the Shiv Dhanush to king Janak, broken by Lord Rama at Sita swayamvar?","a:Shiv","b:Vishnu","c:Parashuram","d:Nandi",'c',true};
+                q[3]={"Who broke the teeth of the lord Ganesha?","a:Shiva","b:Parashuram","c:Indra","d:Kubera",'b',true};
+                q[4]={"Who dictated the epic Mahabharata to Ganesha?","a:Parashuram","b:Vishvamitra","c:Vyasa","d:Indra",'c',true};
+                q[5]={"Who has killed the demon bakasur?","a:Arjun","b:Bhim","c:Krishna","d:Shree Ram",'b',true};
+                q[6]={"For how many days was the battle of kurukshetra was fought","a:12","b:18","c:15","d:19",'b',true};
+                q[7]={"What is the vehicle of lord Ganesha?","a:Elephant","b:Swan","c:Owl","d:Mouse",'d',true};
+                q[8]={"Who is the guru of Pandavas?","a:Dronacharya","b:Parashuram","c:Drupad","d:Dhritarashtra",'a',true};
+                q[9]={"From which area Duryodhana’s maternal uncle Shakuni belongs to","a:Kamboj","b:Panchal","c:Pragjyotishpur","d:Gandhar",'d',true};
                 ask_ques();
                 break;
-        case 'd': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'd': q[0]={"In which place did Satyagraha first started by Mahatma Gandhi.","a:Delhi","b:Calcutta","c:Baroda","d:Champaran",'d',true};
+                q[1]={"Number of years required to build Tajmahal.","a:22 years","b:26 years","c:18 years","d:12 years",'a',true};
+                q[2]={"The first Indian Governor of independent India.","a:Surindnath","b:Rajgopalachari","c:Rajendra Prasad","d:B.R. Ambedkar",'b',true};
+                q[3]={"What movement is the relationship of ‘ do or die ’?","a:Dandi March","b:Quit India Movement","c:Khilafat Movement","d:The Indian Independence Act",'b',true};
+                q[4]={"Who was the first Viceroy of India?","a:Lord canning","b:Lord wellesley","c:Robert clive","d:William bentick",'a',true};
+                q[5]={"Who was the Chairman of the Drafting Committee of the Constitution of India?","a:Vallabhai Patel","b:Dr. BR Ambedkar","c:Dr. Rajendra Prasad","d:Jawahar Lal Nehru",'b',true};
+                q[6]={"Who was the first Indian to be elected to the British Parliament?","a:Lala Lajpat Rai","b:Bipin Chandra Pal","c:Dadabhai Naoroji","d:Gopala Krishna Gokhale",'c',true};
+                q[7]={"Who was the first prime minister of India who died abroad during an official tour?","a:Lal Bahadur Shastri","b:Morarji Desai","c:Gulzarilal Nanda","d:Charan Singh",'a',true};
+                q[8]={"Jantar Mantar in Delhi is historically important for","a:Public Meetings","b:Hunger Strikes","c:Ancient Sculptures","d:Astronomical Observatory",'d',true};
+                q[9]={"First Governor-General of Bengal was ","a:Robert Clive","b:William Bentinck","c:Wellesley","d:Warren Hastings",'d',true};
                 ask_ques();
                 break;
-        case 'e': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'e': q[0]={"The famous scientist who came up with the Theory of Relativity?","a:Isaac Newton","b:Thomas Edison","c:Albert Einstein","d:Nikola Tesla",'c',true};
+                q[1]={"Which organisation holds the World record for maximum number of satellites sent to space on a single rocket?","a:NASA","b:ISRO","c:ESA","d:SpaceX",'d',true};
+                q[2]={"Number of bit used by the IPv6 address.","a:32 bits","b:64 bits","c:128 bits","d:256 bits",'c',true};
+                q[3]={"Which key combination is used to permanently delete a file or folder.","a:Alt+delete","b:Delete","c:Ctrl+delete","d:Shift+delete",'d',true};
+                q[4]={"Rain drops acquire spherical shape due to _____.","a:Viscosity","b:Surface tension","c:Friction","d:Elasticity",'b',true};
+                q[5]={"Which device is used to measure Radioactivity?","a:Calorimeter","b:Geiger Muller Counter","c:Barometer","d:Hygrometer",'b',true};
+                q[6]={"What is the shape of our Milky Way galaxy?","a:Elliptical galaxies","b:Spiral galaxies","c:Lenticulars","d:Irregulars",'b',true};
+                q[7]={"Europa orbits which planet?","a:Jupiter","b:Saturn","c:Mars","d:Neptune",'a',true};
+                q[8]={"Computer trojans are an example of:","a:Spyware","b:Malware","c:Worms","d:Network security devices",'b',true};
+                q[9]={"What device converts digital signals to analog signals?","a:CPU","b:Transistor","c:Modem","d:Capacitor",'c',true};
                 ask_ques();
                 break;
-        case 'f': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
-                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
-                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
-                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
-                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
-                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
-                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
-                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
-                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
-                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+        case 'f': q[0]={"Who has become the 2nd indian fast bowler to play 100 test matches?","a:Mohammed Shami","b:Ashish Nehra","c:Ishant Sharma","d:Zaheer Khan",'c',true};
+                q[1]={"Which web series has won the Best web series award at the Dadasaheb Phalke International Film Festival 2021?","a:Delhi Crime","b:Scam (1992)","c:Asur : Welcome to your dark side","d:Mirzapur-2",'b',true};
+                q[2]={"Which telecom company has partnered with Qualcomm to launch the 5G service in India?","a:Airtel","b:Live","c:VI","d:Jio",'a',true};
+                q[3]={"Which Organization has received the Asia Environmental Enforcement Award 2020?","a:ACB","b:WCCB","c:DRDO","d:NDRI",'b',true};
+                q[4]={"Who has lifted the Australian Open 2021 Men's Tennis title?","a:Daniil Medvedev","b:Novak Djokovic","c:Federico Gaio","d:Aslan Karatsev",'b',true};
+                q[5]={"Who had surpassed MS Dhoni’s feat of smashing most sixes as captain in international cricket?","a:Joe Root","b:Eoin Morgan","c:Steve Smith","d:Faf du Plessis",'b',true};
+                q[6]={"After 25 years, the first peace treaty took place between Israel and _____.","a:UAE","b:Iran","c:Qatar","d:Saudi Arabia",'a',true};
+                q[7]={"Which city is considered as the cleanest city in India under the Swachh Survekshan for 2020?","a:Navi Mumbai","b:Surat","c:Pune","d:Indore",'d',true};
+                q[8]={"Who becomes the first Bollywood celebrity to voice in Amazon’s Alexa?","a:Amitabh Bachchan","b:Aamir Khan","c:Shahrukh Khan","d:Ranbir Kapoor",'a',true};
+                q[9]={"Which one becomes the first state in the country to undertake over one crore tests to screen Coronavirus.","a:Assam","b:Bihar","c:Maharashtra","d:Uttar Pradesh",'d',true};
                 ask_ques();
                 break;
             
@@ -153,15 +151,7 @@ void check_ans(char answer, char right_ans,int ques_no){
         cout<<"\n";
     
     }
-    else if(answer='l' && lifeline_count!=0){
-            lifeline(right_ans,ques_no);
-        
-    }
-    else if (answer='l' && lifeline_count==0){
-        cout<<"you have exhausted all your lifelines please guess any option to continue \n";
-    }
-        
-    else{
+    else if(answer!=right_ans && answer!='l'){
         cout<<"sorry your answer is wrong\n"<<ques_no;
         int amount_deducted=(cash*ques_no)/10;
         cash=cash-cash*ques_no/10;
@@ -171,6 +161,15 @@ void check_ans(char answer, char right_ans,int ques_no){
         
         
     }
+    else if(answer='l' && lifeline_count!=0){
+            lifeline(right_ans,ques_no);
+        
+    }
+    else if (answer='l' && lifeline_count==0){
+        cout<<"you have exhausted all your lifelines please guess any option to continue \n";
+    }
+        
+    
         
      
     
@@ -223,30 +222,5 @@ void lifeline(char right_ans, int ques_no){
             }
             
         
-    }}  
-        
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
+}
