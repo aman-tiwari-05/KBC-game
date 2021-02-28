@@ -1,0 +1,252 @@
+
+
+#include <iostream>
+
+using namespace std;
+void ask_ques();
+void check_ans(char answer, char right_ans,int);
+void lifeline(char right_ans,int ques_no);
+int lifeline_count=3;
+int cash=100;
+bool double_dip=true;
+bool skip=true;
+
+
+struct Question{
+    string ques;
+    string opt_a;
+    string opt_b;
+    string opt_c;
+    string opt_d;
+    char ans;
+    bool avail;
+};
+Question q[10];
+
+int main()
+{   char topic ;
+    cout<<"Choose any topic given below of your intrest.\n";
+    cout<<"Enter 'a' for  \n ";
+    cout<<"Enter 'b' for  \n ";
+    cout<<"Enter 'c' for  \n ";
+    cout<<"Enter 'd' for  \n ";
+    cout<<"Enter 'e' for  \n ";
+    cout<<"Enter 'f' for  \n ";
+    cin>>topic;
+    switch(topic){
+        case 'a': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+        case 'b': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+        case 'c': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+        case 'd': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+        case 'e': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+        case 'f': q[0]={"Question1 ","a:","b: ","c: ","d:",'a',true};
+                q[1]={"Question2 ","a:","b: ","c: ","d:",'a',true};
+                q[2]={"Question3 ","a:","b: ","c: ","d:",'a',true};
+                q[3]={"Question4 ","a:","b: ","c: ","d:",'a',true};
+                q[4]={"Question5 ","a:","b: ","c: ","d:",'a',true};
+                q[5]={"Question6 ","a:","b: ","c: ","d:",'a',true};
+                q[6]={"Question7 ","a:","b: ","c: ","d:",'a',true};
+                q[7]={"Question8 ","a:","b: ","c: ","d:",'a',true};
+                q[8]={"Question9 ","a:","b: ","c: ","d:",'a',true};
+                q[9]={"Question10 ","a:","b: ","c: ","d:",'a',true};
+                ask_ques();
+                break;
+            
+            
+        }
+    return 0;
+    }
+    
+    
+    
+  
+void ask_ques(){
+    
+    int i=0;
+    while(i<10){
+        
+        
+        int n=rand()%10;
+        if(q[n].avail){
+            q[n].avail=false;
+            cout<<"--------This is question number "<<i+1<<" for Rupees "<<(i+1)*cash<<"---------\n";
+            cout<<"-->"<<q[n].ques<<endl;   //for printing ques 
+            cout<<q[n].opt_a<<"\t\t\t"<<q[n].opt_b<<endl; //for options
+            cout<<q[n].opt_c<<"\t\t\t"<<q[n].opt_d<<endl;
+            char choice;
+            cout<<"Enter your choice: ";
+            cin>>choice;
+            
+            i++;
+            check_ans(choice , q[n].ans,i);   //using i as question number
+            
+             
+            
+            
+        }
+        
+        
+        }
+    }
+void check_ans(char answer, char right_ans,int ques_no){
+    
+    if(answer==right_ans){
+        cash=ques_no*cash;
+        cout<<"congrats your answer is right\n";
+        cout<<"you have won: "<<cash<<endl;
+        cout<<"\n";
+        cout<<"\n";
+    
+    }
+    else if(answer='l' && lifeline_count!=0){
+            lifeline(right_ans,ques_no);
+        
+    }
+    else if (answer='l' && lifeline_count==0){
+        cout<<"you have exhausted all your lifelines please guess any option to continue \n";
+    }
+        
+    else{
+        cout<<"sorry your answer is wrong\n"<<ques_no;
+        int amount_deducted=(cash*ques_no)/10;
+        cash=cash-cash*ques_no/10;
+        cout<<"amount deducted   "<<amount_deducted<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        
+    }
+        
+     
+    
+
+}
+void lifeline(char right_ans, int ques_no){
+    cout<<"available lifelines: ";
+    if(double_dip){    //to check availablity of double dip 
+        cout<<"double dip\n";
+        
+    }
+    if(skip){   //to check availablity of skip 
+        cout<<("\t\t\tskip\n");
+    }
+    
+   cout<<"enter full name of lifeline you want to use exactly as shown above\n";
+   
+   string life_line;
+   cin>>life_line;
+   if(life_line=="skip"){
+       cout<<"You have successfully  skipped the question  without any deduction\n\n ";
+       skip=false;
+   } //for skip 
+       
+    else if(life_line=="double dip"){                                   //for double_dip
+        cout<<"you have selected double dip life line so you will be given 2 chances to enter the correct choice\n";
+        double_dip=false;
+        lifeline_count--;
+        bool num=false;
+        
+        for(int i=1;i<3;i++){
+            char opt;
+            cout<<"enter your"<<i<<"time: ";
+            cin>>opt;
+            if (opt==right_ans){
+                num=true;
+                cout<<endl;
+                break;}}
+            if (num){
+                cout<<"congrats your answer is right\n";
+                cash=ques_no*cash;
+                cout<<"you have won: "<<cash<<endl;
+            }
+            else{
+                cout<<"you both answers are wrong\n";
+                int amount_deducted=(cash*ques_no)/10;
+            cash=cash-cash*ques_no/10;
+            cout<<"amount deducted: "<<amount_deducted<<endl;
+                
+            }
+            
+        
+    }}  
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
