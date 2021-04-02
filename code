@@ -40,7 +40,7 @@ void Rules(){
     cout<<"6. Type a, b, c or d to answer any Question.\n\n";
     cout<<"Hit enter to start the game";
     
-    cin.get();A
+    cin.get();
     
     system("clear");
     
